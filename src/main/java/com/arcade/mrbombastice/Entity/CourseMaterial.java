@@ -23,7 +23,8 @@ public class CourseMaterial {
 
     @OneToOne(
             cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY
+            fetch = FetchType.LAZY,
+            optional = false
     )
     @JoinColumn(name = "course_Id" , referencedColumnName = "courseId")
     private Course course;
